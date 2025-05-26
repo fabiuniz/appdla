@@ -29,3 +29,9 @@ def cnh_renewal(input: CNHInput):
     if input.primeiraHabilitacao:
         vencimento = '1 ano'
     return {'prazo_renovacao': vencimento}
+
+# Day 10: Pilha Simples
+product_stack = []
+@app.post('/day10/stack/push_product')
+def push_product():
+    return {'message': 'Produto empilhado'}
