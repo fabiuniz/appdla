@@ -41,3 +41,8 @@ playlist_state = {'musicas': []}
 @app.post('/day16_18/playlist/add_song')
 def add_song_to_playlist():
     return {'message': 'Música adicionada'}
+
+# Day 19: Recursão
+@app.post('/day19/recursion/calculate_invoice_total')
+def calculate_invoice_total():
+    return {'totalFatura': 0}
