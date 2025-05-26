@@ -17,3 +17,15 @@ class BasicOpOutput(BaseModel):
 @app.post('/day03/sum', response_model=BasicOpOutput)
 def calculate_sum(input: BasicOpInput):
     return {'result': input.val1 + input.val2}
+
+# Day 04: Condicionais
+class CNHInput(BaseModel):
+    idade: int
+    primeiraHabilitacao: bool
+
+@app.post('/day04/cnh_renewal')
+def cnh_renewal(input: CNHInput):
+    vencimento = ''
+    if input.primeiraHabilitacao:
+        vencimento = '1 ano'
+    return {'prazo_renovacao': vencimento}
