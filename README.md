@@ -79,8 +79,8 @@ Siga os passos abaixo para configurar e rodar a aplicação em seu ambiente loca
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [URL_DO_SEU_REPOSITORIO]
-    cd [nome_da_pasta_do_projeto]
+    git clone https://github.com/fabiuniz/appdla.git
+    cd appdla
     ```
 
 2.  **Configurar o Backend (FastAPI):**
@@ -101,7 +101,7 @@ Siga os passos abaixo para configurar e rodar a aplicação em seu ambiente loca
         ```bash
         uvicorn main:app --reload
         ```
-        O backend estará acessível em `http://127.0.0.1:8000`. Você pode testar os endpoints através da documentação interativa em `http://127.0.0.1:8000/docs`.
+        O backend estará acessível em `http://vmlinuxd:8000`. Você pode testar os endpoints através da documentação interativa em `http://vmlinuxd:8000/docs`.
 
 3.  **Configurar e Acessar o Frontend (React):**
     * O frontend é composto por `index.html` e `App.jsx`. Para executá-lo, você pode usar um servidor HTTP simples na mesma pasta.
