@@ -35,3 +35,9 @@ product_stack = []
 @app.post('/day10/stack/push_product')
 def push_product():
     return {'message': 'Produto empilhado'}
+
+# Day 16 & 18: Playlist
+playlist_state = {'musicas': []}
+@app.post('/day16_18/playlist/add_song')
+def add_song_to_playlist():
+    return {'message': 'Música adicionada'}
