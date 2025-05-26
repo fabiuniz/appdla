@@ -2,4 +2,22 @@ version: '3'
 
 services:
   backend:
+    build:
+      context: ./backend # Onde o Dockerfile do backend está
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # Mapeia a porta 8000 do host para a porta 8000 do container
+    volumes:
+      - ./backend:/app # Monta o diretório do backend para desenvolvimento (hot-reloading)
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload # Comando para iniciar o FastAPI
+
   frontend:
+    build:
+      context: ./frontend # Onde o Dockerfile do frontend está
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Mapeia a porta 3000 do host para a porta 3000 do container
+    volumes:
+      - ./frontend:/app # Monta o diretório do frontend para desenvolvimento
+    depends_on:
+      - backend # Garante que o backend suba antes do frontend
