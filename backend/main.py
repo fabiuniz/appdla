@@ -12,3 +12,8 @@ class BasicOpInput(BaseModel):
 
 class BasicOpOutput(BaseModel):
     result: float
+
+# Day 03: Operações Básicas
+@app.post('/day03/sum', response_model=BasicOpOutput)
+def calculate_sum(input: BasicOpInput):
+    return {'result': input.val1 + input.val2}
